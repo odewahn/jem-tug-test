@@ -1,9 +1,3 @@
-#
-# This is a sample dockerfile for spinning up a content image
-# Basically, it starts the base box and then uses the 
-# atlas api to load up the content
-#
-
 FROM ipython/notebook
 MAINTAINER Andrew Odewahn "odewahn@oreilly.com" 
 
@@ -20,10 +14,10 @@ RUN sudo apt-get install -y gfortran gcc-multilib lynx emacs23-nox
 RUN pip install numpy==1.6.2
 RUN pip install scipy
 RUN pip install neurolab
-RUN pip install hyperloglog                                      
-RUN pip install countminsketch # or build from GitHub repo
+#RUN pip install hyperloglog                                      
+#RUN pip install countminsketch # or build from GitHub repo
 RUN pip install pybloom               
-RUN pip install lshash # or build from PyPi tarball
+#RUN pip install lshash # or build from PyPi tarball
 
 # Configure Nitrious / tug
 
