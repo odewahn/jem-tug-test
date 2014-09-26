@@ -1,6 +1,7 @@
 FROM ipython/notebook
 MAINTAINER Andrew Odewahn "odewahn@oreilly.com" 
 
+
 #
 # Install system dependencies
 #
@@ -20,9 +21,9 @@ RUN pip install pybloom
 #RUN pip install lshash # or build from PyPi tarball
 
 # Configure Nitrious / tug
+# From https://gist.github.com/sandeep/dddac4210b1ea0258c68#file-Nitrous-IO
 
 RUN mkdir -p /usr/local/app/atlas
-
 ADD . /usr/local/app/atlas   
 WORKDIR /usr/local/app/atlas  
 EXPOSE 8888:8888
