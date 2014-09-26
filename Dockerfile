@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM ubuntu:latest
 MAINTAINER Andrew Odewahn "odewahn@oreilly.com" 
 
 #
@@ -15,14 +15,13 @@ RUN pip install --upgrade pip
 RUN pip install numpy==1.7.1
 RUN pip install Jinja2==2.6
 RUN pip install httplib2==0.8
-RUN pip install matplotlib==1.2.1
 RUN pip install python-dateutil==2.1
 RUN pip install python-gflags==2.0
 RUN pip install pyzmq==13.0.0
 RUN pip install tornado==2.4.1
 RUN pip install wsgiref==0.1.2
 RUN pip install ipython==1.1.0
-RUN pip install matplotlib --allow-all-external --allow-unverified 
+RUN pip install --allow-all-external --allow-unverified  matplotlib 
 
 #
 # Install JEM-specific system dependencies
